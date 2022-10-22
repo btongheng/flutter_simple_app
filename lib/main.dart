@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
+import 'config/custom_color.dart'; // Custom Color
 import 'screens/home_screen.dart';
 
 void main() {
@@ -21,8 +22,10 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: customColor,
+        scaffoldBackgroundColor: customBlackColor[500],
       ),
+      
       home:  HomeScreen(title: 'Flutter Demo Home Page'),
     );
   }
